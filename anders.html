@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Quiz Time!</title>
+      <!-- Favicon -->
+      <link rel="shortcut icon" href="logo_blue_32x32.png">
+	   <!-- Google Fonts -->
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="styles.css">
+      <!-- JavaScript -->
+      <script src="anders.js" defer></script><!-- async or defer --> 
+   </head>
+
+   <body>
+      <h1>Quiz Time!</h1>
+
+      <!-- We can stop the form from submission by giving the "return false;"
+         value to the onsubmit event. Giving this value to the event makes the
+         form return nothing and prevent it from submission as well as refreshing the browser.
+       -->
+      <form id="quizForm" onsubmit="return false;">
+         <!-- Visitor information -->
+         <fieldset>
+            <legend>Visitor information</legend>
+
+            <!-- Explicit Label -->
+            <label for="firstName">First Name: <span class="required-star">*</span></label>
+            <input type="text" id="firstName" name="firstName" required pattern="[A-Za-z]+" title="Only letters are allowed." autofocus>              
+
+            <label for="lastName">Last Name: <span class="required-star">*</span></label>
+            <input type="text" id="lastName" name="lastName" required pattern="[A-Za-z]+" title="Only letters are allowed.">              
+
+            <label for="email">Email: <span class="required-star">*</span></label>
+            <input type="email" id="email" name="email" required placeholder="you@email.com"
+               pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$" title="Enter a valid email address">                      
+         </fieldset>
+
+         <!-- Quiz Questiont -->
+         <h2>Quiz Questions</h2>
+
+         <!-- Question 1 -->
+         <div class="form-group">
+            <label for="q1">1. What color is Kristianstad associated with?</label>
+            <input type="text" id="q1" name="q1" required pattern="[A-Za-z]+" title="Only letters are allowed">
+            <span class="required-star">*</span>
+         </div>
+
+         <!-- Question 2 -->
+         <div class="form-group">
+            <p>2. What kind of language is HTML?<span class="required-star">&nbsp;*</span></p>
+            <input type="radio" id="script" name="q2" value="Script" required>
+            <label for="script">Script</label><br>
+            <input type="radio" id="markup" name="q2" value="Markup">
+            <label for="markup">Markup</label><br>
+            <input type="radio" id="programming" name="q2" value="Programming">
+            <label for="programming">Programming</label>           
+         </div>
+
+         <!-- Question 3 -->
+         <div class="form-group">
+            <p>3. Which are web browsers?<span class="required-star">&nbsp;*</span></p>
+            <input type="checkbox" id="firefox" name="q3" value="firefox" required>
+            <label for="firefox">Firefox</label><br>
+            <input type="checkbox" id="chrome" name="q3" value="chrome">
+            <label for="chrome">Chrome</label><br>
+            <input type="checkbox" id="safari" name="q3" value=safari>
+            <label for="safari">Safari</label><br>
+            <input type="checkbox" id="edge" name="q3" value=edge>
+            <label for="edge">Edge</label>           
+         </div>
+
+         <!-- Question 4 -->
+         <div class="form-group">
+            <label for="q4">4. Who Created JavaScript?</label>
+            <select id="q4" name="q4" required>
+               <option value=""></option>
+               <option value="Steve Jobs">Steve Jobs</option>
+               <option value="Bill Gates">Bill Gates</option>
+               <option value="Brendan Eich">Brendan Eich</option>
+               <option value="Jeff Bezos">Jeff Bezos</option>
+               <option value="Steve Wozniak">Steve Wozniak</option>
+               <option value="Elon Musk">Elon Musk</option>
+            </select>
+         </div>
+
+         <!-- Question 5 -->
+         <div class="form-group">
+            <label for="q5">5. Kristianstad is called Little ...?</label>
+            <input type="text" id="q5" name="q5" required pattern="[A-Za-z]+" title="Only letters are allowed">
+            <span class="required-star">*</span>
+         </div>
+
+         <div class="form-group">
+            <input type="submit" id="submit" name="submit" value="Get Results">
+            <input type="reset" id="reset" name="reset" value="Reset">
+         </div>
+
+         
+      </form>
+
+      <div id="resultat"></div>
+      
+   </body>
+
+</html>
