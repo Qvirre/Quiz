@@ -1,5 +1,17 @@
+/**
+ * Create a class for the Facit object type.
+ * @link https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes
+*/
 
+import Facit from "./Facit.js";
 
+const quizFacit = new Facit(
+    "Orange",
+    "Markup",
+    ["Firefox", "Chrome", "Safari", "Edge"],
+    "Brendan Eich",
+    "Paris"
+);
 
 function isTextCorrect(questionId, correctValue) {
     const answer = document.getElementById(questionId).value;
@@ -35,15 +47,16 @@ function arraysEqual(arr1, arr2) {
 
 /* Event */
 const submitButton = document.getElementById("submit");
-const reserButton  = document.getElementById("reset");
+const resetButton  = document.getElementById("reset");
+const facitButton  = document.getElementById("facit");
 
 submitButton.addEventListener("click", (event) => {
-    let content = "The form is commitid!\n";
+    let content = "";
     let firstName = document.getElementById("firstName").value + "\n";
     let lastName = document.getElementById("lastName").value + "\n";
     let email = document.getElementById("email").value;
     content += firstName + lastName + email;
-    document.getElementById("resultat").innerText = content;
+    document.getElementById("divError").innerText = content;
 
     /* Rätta */
     let counter = 0;
@@ -76,11 +89,30 @@ submitButton.addEventListener("click", (event) => {
     };
 
     /* Redovisa antal rätt */
-    document.getElementById("resultat").innerText = counter;
+    document.getElementById("divScore").innerText = "You scorde " + counter + " out of 5.";
   
 });
 
-reserButton.addEventListener("click", (event) => {
-    document.getElementById('resultat').innerText = ""; 
+resetButton.addEventListener("click", (event) => {
+    document.getElementById("divError").innerText = ""; 
+    document.getElementById("divScore").innerText = "";
+    document.getElementById("divFacit").innerText = ""; 
+});
+
+facitButton.addEventListener("click", (event) => {
+
+    /* Mix text and variables with template literals */
+    const content = `
+    <h3>Correct Answers</h3>
+    <ol>
+        <li>${quizFacit.answerOne}</li>
+        <li>${quizFacit.answerTwo}</li>
+        <li>${quizFacit.answerThree}</li>
+        <li>${quizFacit.answerFoure}</li>
+        <li>${quizFacit.answerFive}</li>
+    </ol>  
+    `;
+
+    document.getElementById("divFacit").innerHTML = content; 
 });
 

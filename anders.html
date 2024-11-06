@@ -14,7 +14,8 @@
       <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
       <link rel="stylesheet" href="styles.css">
       <!-- JavaScript -->
-      <script src="anders.js" defer></script><!-- async or defer --> 
+      <script type="module" src="Facit.js"></script>
+      <script type="module" src="anders.js"></script>
    </head>
 
    <body>
@@ -24,21 +25,23 @@
          value to the onsubmit event. Giving this value to the event makes the
          form return nothing and prevent it from submission as well as refreshing the browser.
        -->
-      <form id="quizForm" onsubmit="return false;">
+      <form id="quizForm" method="post" action="" onsubmit="return false;">
          <!-- Visitor information -->
          <fieldset>
-            <legend>Visitor information</legend>
+            <legend>&nbsp;Visitor Information&nbsp;</legend>
 
-            <!-- Explicit Label -->
-            <label for="firstName">First Name: <span class="required-star">*</span></label>
-            <input type="text" id="firstName" name="firstName" required pattern="[A-Za-z]+" title="Only letters are allowed." autofocus>              
+            <label for="firstName">First Name:</label>
+            <input type="text" id="firstName" name="firstName" required aria-required="true" pattern="[A-Za-z]+" title="Only letters are allowed." autofocus>              
+            <span class="required-star">*</span>
 
-            <label for="lastName">Last Name: <span class="required-star">*</span></label>
-            <input type="text" id="lastName" name="lastName" required pattern="[A-Za-z]+" title="Only letters are allowed.">              
+            <label for="lastName">Last Name:</label>
+            <input type="text" id="lastName" name="lastName" required aria-required="true" pattern="[A-Za-z]+" title="Only letters are allowed.">              
+            <span class="required-star">*</span>
 
-            <label for="email">Email: <span class="required-star">*</span></label>
-            <input type="email" id="email" name="email" required placeholder="you@email.com"
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required aria-required="true" placeholder="you@email.com"
                pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$" title="Enter a valid email address">                      
+            <span class="required-star">*</span>
          </fieldset>
 
          <!-- Quiz Questiont -->
@@ -46,15 +49,15 @@
 
          <!-- Question 1 -->
          <div class="form-group">
-            <label for="q1">1. What color is Kristianstad associated with?</label>
-            <input type="text" id="q1" name="q1" required pattern="[A-Za-z]+" title="Only letters are allowed">
+            <label for="q1" class="block">1. What color is Kristianstad associated with?</label>
+            <input type="text" id="q1" name="q1" required aria-required="true" pattern="[A-Za-z]+" title="Only letters are allowed">
             <span class="required-star">*</span>
          </div>
 
          <!-- Question 2 -->
          <div class="form-group">
             <p>2. What kind of language is HTML?<span class="required-star">&nbsp;*</span></p>
-            <input type="radio" id="script" name="q2" value="Script" required>
+            <input type="radio" id="script" name="q2" value="Script" required aria-required="true">
             <label for="script">Script</label><br>
             <input type="radio" id="markup" name="q2" value="Markup">
             <label for="markup">Markup</label><br>
@@ -65,7 +68,7 @@
          <!-- Question 3 -->
          <div class="form-group">
             <p>3. Which are web browsers?<span class="required-star">&nbsp;*</span></p>
-            <input type="checkbox" id="firefox" name="q3" value="firefox" required>
+            <input type="checkbox" id="firefox" name="q3" value="firefox" required aria-required="true">
             <label for="firefox">Firefox</label><br>
             <input type="checkbox" id="chrome" name="q3" value="chrome">
             <label for="chrome">Chrome</label><br>
@@ -77,8 +80,8 @@
 
          <!-- Question 4 -->
          <div class="form-group">
-            <label for="q4">4. Who Created JavaScript?</label>
-            <select id="q4" name="q4" required>
+            <label for="q4" class="block">4. Who Created JavaScript?</label>
+            <select id="q4" name="q4" required aria-required="true">
                <option value=""></option>
                <option value="Steve Jobs">Steve Jobs</option>
                <option value="Bill Gates">Bill Gates</option>
@@ -87,24 +90,30 @@
                <option value="Steve Wozniak">Steve Wozniak</option>
                <option value="Elon Musk">Elon Musk</option>
             </select>
+            <span class="required-star">*</span>
          </div>
 
          <!-- Question 5 -->
          <div class="form-group">
-            <label for="q5">5. Kristianstad is called Little ...?</label>
-            <input type="text" id="q5" name="q5" required pattern="[A-Za-z]+" title="Only letters are allowed">
+            <label for="q5" class="block">5. Kristianstad is called Little ...?</label>
+            <input type="text" id="q5" name="q5" required aria-required="true" pattern="[A-Za-z]+" title="Only letters are allowed">
             <span class="required-star">*</span>
          </div>
 
+         <!-- Buttons -->
          <div class="form-group">
-            <input type="submit" id="submit" name="submit" value="Get Results">
-            <input type="reset" id="reset" name="reset" value="Reset">
+            <input type="submit" id="submit" class="button" name="submit" value="Submit Answers">
+            <input type="reset" id="reset" class="button" name="reset" value="Reset">
+            <input type="button" id="facit" class="button" name="facit" value="Show Correct Answers">
          </div>
 
-         
-      </form>
+         <div id="divError"></div>
 
-      <div id="resultat"></div>
+         <div id="divScore"></div>
+
+         <div id="divFacit"></div>
+
+      </form>
       
    </body>
 

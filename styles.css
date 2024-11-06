@@ -1,52 +1,72 @@
 
-
 body {
-   font-family: Arial, Helvetica, sans-serif;
-   background: #ccc;
+   box-sizing: border-box;
+   font-family: 'Open Sans', sans-serif;
+   font-size: 1rem;
+   line-height: 1.4;
+   background: whitesmoke;
 }
 h1 {
+   color: blue;
+   font-size: 2.4rem;
+   font-weight: normal;
+   font-style: italic;
    text-align: center;
+   margin: 1rem;
+}
+h2 {
+   font-size: 1.5rem;
+   font-weight: normal;
+   font-style: italic;
+   color: #999;
+   padding: 0;
+   margin-bottom: 0;
+}
+p {
+   margin-bottom: 5px;
 }
 
 /* Form
 --------------------------------------------- */
 form {
+   min-width: 400px;
+   max-width: 960PX;
+   margin: 0 auto;
    background: #fcfcfc;
    padding: 1rem;
    border-radius: 0.5rem;
-}
-form .form-group {
-   margin: 1rem;
+   box-shadow: 3px 3px 5px #ccc;
 }
 form label {
    cursor: pointer;    
 }
-form label:focus-within {
-   color: blue;
+input[type=text]:hover,
+input[type=email]:hover,
+input[type=radio]:hover,
+input[type=checkbox]:hover,
+select:hover,
+.button:hover {
+   border: 2px solid blue;
 }
-form input[type=text]:hover {
-   border-color: darkblue;
-}
-form input[type=text]:focus {
-   border: 1px solid darkblue;
-}
-form input[type=email]:hover {
-   border-color: darkblue;
-}
-form input[type=email]:focus {
-   border: 1px solid darkblue;
+input[type=text]:focus,
+input[type=email]:focus,
+input[type=radio]:focus,
+input[type=checkbox]:focus,
+select:focus,
+.button:focus {
+   border: 2px solid #ccc;
+   outline: 2px solid orange;
 }
 
 form span {
-   color: red;
-  
+   color: red; 
 }
 
 fieldset {
    border: solid 1px #ccc;
    padding: 1rem;
-   border-radius: 6px;
-   width: 80%;
+   border-radius: 5px;
+   max-width: 960px;
    min-width: 400px;
 }
 fieldset:last-of-type {
@@ -54,15 +74,63 @@ fieldset:last-of-type {
 }
 
 legend {
-   font-size: 1.2rem;
+   font-size: 1.5rem;
+   font-style: italic;
    padding: 0;
    color: #999;
 }
 
-fieldset label {
+fieldset label,
+.block {
    display: block;
    padding: .8rem 0 0.2rem;
 }
 fieldset label:first-of-type {
    padding-top: 0;
 }
+
+button, input, select {
+   font-family: inherit;
+   font-size: 100%;
+} 
+
+input, select {
+   border: 2px solid #ccc;
+}
+
+input[type=text]:valid,
+input[type=email]:valid,
+select:valid {
+   border: 2px solid green;
+}
+
+input, select {
+   box-sizing: border-box;
+}
+
+input[type="text"],
+input[type="email"],
+select {
+   width: 20rem;
+   padding: 5px;
+   border-radius: 5px;
+   background-color: rgb(232 240 254);
+}
+
+select {
+   cursor: pointer;
+}
+
+.button {
+   cursor: pointer;
+   padding: 5px 10px;
+   border-radius: 5px;
+   box-shadow: 3px 3px 5px #ccc;
+   margin-right: 1rem;
+   margin-top: 1rem;
+}
+
+.form-group {
+
+}
+
