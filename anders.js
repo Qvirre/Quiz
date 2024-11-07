@@ -1,9 +1,28 @@
 /**
- * Create a class for the Facit object type.
- * @link https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes
-*/
+ * Creating classes:
+ *
+ * Class declaration: class Name {}
+ * Class expression:  const Name = class {}
+ */
 
-import Facit from "./Facit.js";
+class Facit {
+   constructor(
+      // Defines parameters:
+      answerOne,
+      answerTwo,
+      answerThree,
+      answerFoure,
+      answerFive
+   ) {
+      // Define properties:
+      this.answerOne = answerOne;
+      this.answerTwo = answerTwo;
+      this.answerThree = answerThree;
+      this.answerFoure = answerFoure;
+      this.answerFive = answerFive;
+   }
+   // Add methods like normal functions:  
+}
 
 const quizFacit = new Facit(
    "Orange",
