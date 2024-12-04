@@ -44,74 +44,76 @@
             <span class="required-star">*</span>
          </fieldset>
 
-         <!-- Quiz Questiont -->
-         <h2>Quiz Questions</h2>
+         <!-- Quiz Questionts -->
+         <section class="quiz"> 
+            <h2>Quiz Questions</h2>
 
-         <!-- Question 1 -->
-         <div class="form-group">
-            <label for="q1" class="block">1. What color is Kristianstad associated with?</label>
-            <input type="text" id="q1" name="q1" required aria-required="true" pattern="[A-Za-z]+" title="Only letters are allowed!">
-            <span class="required-star">*</span>
-         </div>
+            <!-- Question 1 -->
+            <div class="form-group">
+               <label for="q1" class="block">1. What color is Kristianstad associated with?</label>
+               <input type="text" id="q1" name="q1" required aria-required="true" pattern="[A-Za-z]+" title="Only letters are allowed!">
+               <span class="required-star">*</span>
+            </div>
 
-         <!-- Question 2 -->
-         <div class="form-group">
-            <p>2. What kind of language is HTML?<span class="required-star">&nbsp;*</span></p>
-            <input type="radio" id="script" name="q2" value="Script" required aria-required="true">
-            <label for="script">Script</label><br>
-            <input type="radio" id="markup" name="q2" value="Markup">
-            <label for="markup">Markup</label><br>
-            <input type="radio" id="programming" name="q2" value="Programming">
-            <label for="programming">Programming</label>           
-         </div>
+            <!-- Question 2 -->
+            <div class="form-group">
+               <p>2. What kind of language is HTML?<span class="required-star">&nbsp;*</span></p>
+               <input type="radio" id="script" name="q2" value="Script" required aria-required="true">
+               <label for="script">Script</label><br>
+               <input type="radio" id="markup" name="q2" value="Markup">
+               <label for="markup">Markup</label><br>
+               <input type="radio" id="programming" name="q2" value="Programming">
+               <label for="programming">Programming</label>           
+            </div>
 
-         <!-- Question 3 -->
-         <div class="form-group">
-            <p>3. Which are web browsers?<span class="required-star">&nbsp;*</span></p>
-            <input type="checkbox" id="firefox" name="q3" value="firefox" required aria-required="true">
-            <label for="firefox">Firefox</label><br>
-            <input type="checkbox" id="chrome" name="q3" value="chrome">
-            <label for="chrome">Chrome</label><br>
-            <input type="checkbox" id="safari" name="q3" value=safari>
-            <label for="safari">Safari</label><br>
-            <input type="checkbox" id="edge" name="q3" value=edge>
-            <label for="edge">Edge</label>           
-         </div>
+            <!-- Question 3 -->
+            <div class="form-group">
+               <p>3. Which are web browsers?<span class="required-star">&nbsp;*</span></p>
+               <input type="checkbox" id="firefox" name="q3" value="firefox" required aria-required="true">
+               <label for="firefox">Firefox</label><br>
+               <input type="checkbox" id="chrome" name="q3" value="chrome">
+               <label for="chrome">Chrome</label><br>
+               <input type="checkbox" id="safari" name="q3" value=safari>
+               <label for="safari">Safari</label><br>
+               <input type="checkbox" id="edge" name="q3" value=edge>
+               <label for="edge">Edge</label>           
+            </div>
 
-         <!-- Question 4 -->
-         <div class="form-group">
-            <label for="q4" class="block">4. Who Created JavaScript?</label>
-            <select id="q4" name="q4" required aria-required="true">
-               <option value="">Choose an option</option>
-               <option value="Steve Jobs">Steve Jobs</option>
-               <option value="Bill Gates">Bill Gates</option>
-               <option value="Brendan Eich">Brendan Eich</option>
-               <option value="Jeff Bezos">Jeff Bezos</option>
-               <option value="Steve Wozniak">Steve Wozniak</option>
-               <option value="Elon Musk">Elon Musk</option>
-            </select>
-            <span class="required-star">*</span>
-         </div>
+            <!-- Question 4 -->
+            <div class="form-group">
+               <label for="q4" class="block">4. Who Created JavaScript?</label>
+               <select id="q4" name="q4" required aria-required="true">
+                  <option value="">Choose an option</option>
+                  <option value="Steve Jobs">Steve Jobs</option>
+                  <option value="Bill Gates">Bill Gates</option>
+                  <option value="Brendan Eich">Brendan Eich</option>
+                  <option value="Jeff Bezos">Jeff Bezos</option>
+                  <option value="Steve Wozniak">Steve Wozniak</option>
+                  <option value="Elon Musk">Elon Musk</option>
+               </select>
+               <span class="required-star">*</span>
+            </div>
 
-         <!-- Question 5 -->
-         <div class="form-group">
-            <label for="q5" class="block">5. Kristianstad is called Little ...?</label>
-            <input type="text" id="q5" name="q5" required aria-required="true" pattern="[A-Za-z]+" title="Only letters are allowed!">
-            <span class="required-star">*</span>
-         </div>
+            <!-- Question 5 -->
+            <div class="form-group">
+               <label for="q5" class="block">5. Kristianstad is called Little ...?</label>
+               <input type="text" id="q5" name="q5" required aria-required="true" pattern="[A-Za-z]+" title="Only letters are allowed!">
+               <span class="required-star">*</span>
+            </div>
 
-         <!-- Buttons -->
-         <div class="form-group">
-            <input type="submit" id="submit" class="button" name="submit" value="Submit Answers">
-            <input type="reset" id="reset" class="button" name="reset" value="Reset">
-            <input type="button" id="facit" class="button" name="facit" value="Show Correct Answers">
-         </div>
+            <!-- Buttons -->
+            <div class="form-group">
+               <input type="submit" id="submit" class="button" name="submit" value="Submit Answers">
+               <input type="reset" id="reset" class="button" name="reset" value="Reset">
+               <input type="button" id="facit" class="button" name="facit" value="Show Correct Answers">
+            </div>
 
-         <div id="divError"></div>
+            <div id="divError"></div>
 
-         <div id="divScore"></div>
+            <div id="divScore"></div>
 
-         <div id="divFacit"></div>
+            <div id="divFacit"></div>
+         </section>
 
       </form>
       

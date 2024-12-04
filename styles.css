@@ -7,7 +7,7 @@ body {
    background: whitesmoke;
 }
 h1 {
-   color: blue;
+   color: rebeccapurple;
    font-size: 2.4rem;
    font-weight: normal;
    font-style: italic;
@@ -87,6 +87,10 @@ fieldset label,
 }
 fieldset label:first-of-type {
    padding-top: 0;
+}
+
+.quiz {
+   margin-left: 1rem;
 }
 
 button, input, select {
