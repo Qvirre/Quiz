@@ -222,7 +222,9 @@ submitButton.addEventListener("click", (event) => {
          document.querySelector("#divError").innerText = "Question 4 is required!";
       } else {
          q4Valid = true;
-         document.querySelector("#divError").innerText = "";
+         // document.querySelector("#divError").innerText = "";
+         document.querySelector("#divError").style.color = "blue";
+         document.querySelector("#divError").innerText = "Quiz submitted successfully!";
       }
    }
 
@@ -231,6 +233,7 @@ submitButton.addEventListener("click", (event) => {
       counter++;
    };
 
+   /* Remove validation on question 5
    if (q4Valid === true) {
       if (checkEmty("#q5")) {
          document.querySelector("#divError").innerText = "Question 5 is required!";
@@ -240,7 +243,7 @@ submitButton.addEventListener("click", (event) => {
          document.querySelector("#divError").style.color = "blue";
          document.querySelector("#divError").innerText = "Quiz submitted successfully!";
       }
-   }
+   } */
    
    /* You scorde. */
    document.querySelector("#divScore").innerText = "You scorde " + counter + " out of 5.";
